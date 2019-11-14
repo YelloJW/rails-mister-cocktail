@@ -1,0 +1,7 @@
+<div class='container mt-4 p-3 rounded shadow'>
+<h1>New cocktail</h1>
+<%= simple_form_for @cocktail do |f| %>
+  <%= f.input :name %>
+  <%= f.submit 'mix', class:'btn btn-info mt-3' %>
+<% end %>
+</div>

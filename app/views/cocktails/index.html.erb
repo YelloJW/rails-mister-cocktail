@@ -1,0 +1,24 @@
+
+<h1>Cocktail list</h1>
+<%= link_to new_cocktail_path do %>
+  <i class="fas fa-glass-martini"></i>
+  <% end %>
+<div class='container'>
+  <div class="card-grid">
+    <% @cocktails.each do |cocktail| %>
+      <div class="card">
+        <div>
+          <h2><%= link_to cocktail.name, cocktail_path(cocktail)  %></h2>
+        </div>
+        <div>
+          <%= link_to edit_cocktail_path(cocktail) do %>
+          <i class="fas fa-pencil-alt"></i>
+          <% end %>
+          <%= link_to cocktail_path(cocktail), method: :delete, data: { confirm:'Are you sure?'} do %>
+          <i class="fas fa-trash"></i>
+        </div>
+      </div>
+     <% end %>
+    <% end %>
+  </div>
+</div>

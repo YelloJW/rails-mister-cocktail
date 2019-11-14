@@ -1,0 +1,39 @@
+.card-grid {
+  width: 100%;
+  height: 100%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.card {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background-color: white;
+  opacity: 0.6;
+  padding: 10px;
+}
+
+.card div {
+}
+
+.card i {
+  color:grey;
+}
+
+.card h2 a {
+  color:grey;
+  text-decoration: none;
+}
+
+.card h2 a:hover {
+  color:black;
+}
+

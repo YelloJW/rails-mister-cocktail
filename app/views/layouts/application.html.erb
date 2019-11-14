@@ -12,6 +12,22 @@
   </head>
 
   <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-item navbar-brand" href="#">Cocktails R' Us</a>
+      <button class="navbar-item navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-item navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-item collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="navbar-item nav-item active">
+            <a class="navbar-item nav-link" href="../cocktails">Cocktails <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="navbar-item nav-item">
+            <a class="navbar-item nav-link" href="cocktails/new">Add cocktail</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
     <%= yield %>
   </body>
 </html>
