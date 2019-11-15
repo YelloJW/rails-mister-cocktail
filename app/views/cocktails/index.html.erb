@@ -1,15 +1,15 @@
 
-<h1>Cocktail list</h1>
+<h1>Cocktail Menu</h1>
 <%= link_to new_cocktail_path do %>
   <i class="fas fa-glass-martini"></i>
   <% end %>
 <div class='container'>
-  <div class="card-grid">
+  <div class="card-cocktail-grid">
     <% @cocktails.each do |cocktail| %>
     <% if cocktail.photo.attached? %>
       <% img = cl_image_path(cocktail.photo.key)%>
     <% end %>
-      <div class="card" style="background-image:url('<%= img %>'); background-repeat: no-repeat; background-size: cover">
+      <div class="card-cocktail-index" style="background-image:url('<%= img %>'); background-repeat: no-repeat; background-size: cover">
         <div>
           <h2><%= link_to cocktail.name, cocktail_path(cocktail)  %></h2>
         </div>
