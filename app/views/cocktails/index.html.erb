@@ -6,7 +6,10 @@
 <div class='container'>
   <div class="card-grid">
     <% @cocktails.each do |cocktail| %>
-      <div class="card">
+    <% if cocktail.photo.attached? %>
+      <% img = cl_image_path(cocktail.photo.key)%>
+    <% end %>
+      <div class="card" style="background-image:url('<%= img %>'); background-repeat: no-repeat; background-size: cover">
         <div>
           <h2><%= link_to cocktail.name, cocktail_path(cocktail)  %></h2>
         </div>
@@ -16,9 +19,9 @@
           <% end %>
           <%= link_to cocktail_path(cocktail), method: :delete, data: { confirm:'Are you sure?'} do %>
           <i class="fas fa-trash"></i>
+          <% end %>
         </div>
       </div>
-     <% end %>
     <% end %>
   </div>
 </div>
