@@ -1,7 +1,7 @@
 <h1>cocktails</h1>
 
 
-
+<div class='card-cocktail-grid'>
 <% @cocktails.each do |cocktail| %>
   <% if cocktail.photo.attached? %>
     <% img = cl_image_path(cocktail.photo.key)%>
@@ -10,3 +10,4 @@
     <h2><%= link_to cocktail.name, cocktail_path(cocktail)  %></h2>
   </div>
 <% end %>
+</div>
