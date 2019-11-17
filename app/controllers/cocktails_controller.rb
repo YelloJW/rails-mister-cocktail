@@ -7,6 +7,11 @@ class CocktailsController < ApplicationController
     @cocktail = Cocktail.find(params[:id])
   end
 
+  def search
+    @search = params.dig(:search, :name)
+    @cocktails = Cocktail.where('name ILIKE ?', "%#{@search}%")
+  end
+
   def new
     @cocktail = Cocktail.new
   end
@@ -37,6 +42,6 @@ class CocktailsController < ApplicationController
   end
 
   def cocktail_params
-    params.require(:cocktail).permit(:name, :photo)
+    params.require(:cocktail).permit(:name, :description, :photo)
   end
 end
