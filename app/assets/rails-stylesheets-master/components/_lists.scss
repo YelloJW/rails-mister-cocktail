@@ -1,13 +1,13 @@
 .list-ingredients {
   padding:10px;
 
-  text-align: left;
+  text-align: center;
   font-size: 1em;
   ul {
   list-style: none;
   padding-left: 0;
   }
-  i {
+  .delete {
     color: red;
     text-decoration: none;
     text-shadow: none;

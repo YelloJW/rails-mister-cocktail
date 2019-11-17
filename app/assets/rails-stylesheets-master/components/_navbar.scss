@@ -14,9 +14,14 @@
 .navbar {
   opacity:0.6;
   font-size: 1.5em;
+  transition: 1s;
   a {
     font-size: 1.5em;
     font-family: 'Permanent Marker', cursive;
   }
 }
 
+.navbar:hover {
+  opacity:1;
+  transition: 1s;
+}

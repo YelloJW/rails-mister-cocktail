@@ -1,0 +1,12 @@
+<h1>cocktails</h1>
+
+
+
+<% @cocktails.each do |cocktail| %>
+  <% if cocktail.photo.attached? %>
+    <% img = cl_image_path(cocktail.photo.key)%>
+  <% end %>
+  <div class="card-cocktail-index" style="background-image:url('<%= img %>'); background-repeat: no-repeat; background-size: cover">
+    <h2><%= link_to cocktail.name, cocktail_path(cocktail)  %></h2>
+  </div>
+<% end %>

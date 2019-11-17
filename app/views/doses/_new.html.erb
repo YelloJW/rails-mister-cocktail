@@ -1,9 +1,10 @@
+
 <div class='px-3 pb-3'>
   <hr>
   <h3>Add ingredient</h3>
-  <%= simple_form_for [@cocktail, @dose] do |f| %>
-    <%= f.input :description, placeholder: 'e.g. quantity' %>
+  <%= simple_form_for dose, url: url do |f| %>
     <%= f.association :ingredient %>
+    <%= f.input :description, placeholder: 'e.g. quantity' %>
     <%= f.submit "Add ingredient", class:"btn btn-info" %>
   <% end %>
 </div>

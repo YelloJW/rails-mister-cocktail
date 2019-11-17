@@ -1,0 +1,3 @@
+<%= simple_form_for :search, url: search_path, method: "GET", html: { class: 'p-3 form-inline' } do |f| %>
+  <%= f.input :name, label: false, placeholder: 'search', input_html: {value: ""} %>
+<% end %>

@@ -1,24 +1,31 @@
 
 <h1>Cocktail Menu</h1>
+<!-- link to add new cocktail -->
 <%= link_to new_cocktail_path do %>
   <i class="fas fa-glass-martini"></i>
-  <% end %>
+<% end %>
+<!-- container for coktail grid -->
 <div class='container'>
+  <!-- cocktail grid -->
   <div class="card-cocktail-grid">
+    <!-- iterating through cocktails -->
     <% @cocktails.each do |cocktail| %>
-    <% if cocktail.photo.attached? %>
-      <% img = cl_image_path(cocktail.photo.key)%>
-    <% end %>
+    <!-- if cocktail has photo define variable img -->
+      <% if cocktail.photo.attached? %>
+        <% img = cl_image_path(cocktail.photo.key)%>
+      <% end %>
+      <!-- cocktail card -->
       <div class="card-cocktail-index" style="background-image:url('<%= img %>'); background-repeat: no-repeat; background-size: cover">
         <div>
           <h2><%= link_to cocktail.name, cocktail_path(cocktail)  %></h2>
         </div>
+        <!-- fontawesome icons which link to edit and destory actions -->
         <div>
           <%= link_to edit_cocktail_path(cocktail) do %>
-          <i class="fas fa-pencil-alt"></i>
+            <i class="fas fa-pencil-alt"></i>
           <% end %>
           <%= link_to cocktail_path(cocktail), method: :delete, data: { confirm:'Are you sure?'} do %>
-          <i class="fas fa-trash"></i>
+            <i class="fas fa-trash"></i>
           <% end %>
         </div>
       </div>

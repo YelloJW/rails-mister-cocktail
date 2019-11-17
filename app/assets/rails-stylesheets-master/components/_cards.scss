@@ -41,10 +41,10 @@
 
 .card-ingredients {
   background-color: white;
-  opacity: 0.85;
   border-radius: 10px;
+  opacity: 0.9;
   color: black;
-  width:50%;
+  width:100%;
   padding:10px;
   margin:10px;
   i {
@@ -52,4 +52,31 @@
     text-decoration: none;
     text-shadow: none;
   }
+}
+
+.card-reviews {
+  background-color: white;
+  border-radius: 10px;
+  opacity: 0.9;
+  color: black;
+  width:100%;
+  padding:10px;
+  margin:10px;
+  .rating {
+    color: gold;
+    text-decoration: none;
+    text-shadow: none;
+  }
+  .delete {
+    color: red;
+    text-decoration: none;
+    text-shadow: none;
+    text-align:right;
+
+  }
+}
+
+.review {
+  padding-left: 20px;
+  text-align: left;
 }
